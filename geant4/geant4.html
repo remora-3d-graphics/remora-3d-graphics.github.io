@@ -19,19 +19,61 @@
             flex-direction: column;
             text-align: center;
         }
+        /* Link color */
+    a {
+      color: white;
+    }
+    
+    /* Link color when hovered */
+    a:hover {
+      color: limegreen; 
+    }
+    h1, h2, p {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
     </style>
 </head>
 <body>
     <h1>Remora Geant4 Visualization Driver</h1>
+    <a href="https://hub.docker.com/r/remora3d/g4-demo">View on Docker Hub</a>
     <h2>Why use Remora for my Geant4 app?</h2>
-    <p>Remora Geant4 server solves three problems with Geant4 visualization: </p>
+<p>Remora Geant4 server solves three problems with Geant4 visualization:</p>
   <ol>
     <li>Difficult setup</li>
     <li>Slows down simulation</li>
     <li>Doesn't work in a docker container.</li>
   </ol>
+<p>
+  The mindset for the remora graphics engine was to emulate 
+  the Remora fish. It can attach onto a Geant4 application. 
+  The Geant4 app does not depend on the renderer. 
+  If remora fails, the Geant4 app can still run fine. 
+  Also, the remora can latch onto any different 
+  shape and size of fish. Similarly, the graphics engine 
+  can attach to any Geant4 app whether it be running on 
+  the local machine, in a docker container, or even on a 
+  server somewhere else. Finally, remora is small and 
+  fast. It won’t slow down the Geant4 app at all.
+</p>
+<p>
+  Under the hood, here’s how the remora engine works. 
+  First, you need to add a small server onto your Geant4 app. 
+  This server is open source and available on Github. 
+  This server runs itself on separate threads of execution. 
+  This means it can run parallel to the Geant4 app without 
+  slowing it down at all. The server exposes a port for 
+  communication. Then it just waits and does nothing until 
+  a client is connected. The Remora client is an app that 
+  can be downloaded on your local machine. It connects to 
+  the server through the port, and signals that it’s 
+  ready to receive messages. Then, throughout the Geant4 
+  simulation, data about the Geometry and trajectories 
+  is sent to the client which decodes it and 3D renders it. 
+</p>
 
-    <p>This website mentions Geant4, see Geant4's official website <a href="https://geant4.web.cern.ch/">here.</a></p>
+    <p>This product includes software developed by Members of the Geant4 Collaboration <a href="http://cern.ch/geant4">(http://cern.ch/geant4).</a></p>
+    <p><a href="../index.html">Home</a></p>
     <p>Remora -- copyright John Francis 2024</p>
 </body>
 </html>
