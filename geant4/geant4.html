@@ -12,12 +12,9 @@
             background-color: #2c3e50;
             color: white;
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
             margin: 0;
             flex-direction: column;
-            text-align: center;
         }
         /* Link color */
     a {
@@ -28,7 +25,7 @@
     a:hover {
       color: limegreen; 
     }
-    h1, h2, p {
+    h1, h2, p, ol, h3 {
       margin-left: 50px;
       margin-right: 50px;
     }
@@ -36,7 +33,7 @@
 </head>
 <body>
     <h1>Remora Geant4 Visualization Driver</h1>
-    <a href="https://hub.docker.com/r/remora3d/g4-demo">View on Docker Hub</a>
+    <p><a href="https://hub.docker.com/r/remora3d/g4-demo">View on Docker Hub</a></p>
     <h2>Why use Remora for my Geant4 app?</h2>
 <p>Remora Geant4 server solves three problems with Geant4 visualization:</p>
   <ol>
@@ -46,7 +43,8 @@
   </ol>
 <p>
   The mindset for the remora graphics engine was to emulate 
-  the Remora fish. It can attach onto a Geant4 application. 
+  the Remora fish. It is an optional attachment onto a Geant4 
+  application. 
   The Geant4 app does not depend on the renderer. 
   If remora fails, the Geant4 app can still run fine. 
   Also, the remora can latch onto any different 
@@ -74,6 +72,6 @@
 
     <p>This product includes software developed by Members of the Geant4 Collaboration <a href="http://cern.ch/geant4">(http://cern.ch/geant4).</a></p>
     <p><a href="../index.html">Home</a></p>
-    <p>Remora -- copyright John Francis 2024</p>
+    <h3>Remora -- copyright John Francis 2024</h3>
 </body>
 </html>
